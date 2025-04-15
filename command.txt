@@ -1,0 +1,28 @@
+CI/CD
+
+"homepage": "https://GPSSwamy.github.io/reg-form",
+
+docker
+
+docker build -t reg-form .
+docker run -d -p 8082:80 reg-form
+docker tag reg-form pavangunnam08/react-app:latest
+docker push pavangunnam08/react-app:latest
+docker pull pavangunnam08/react-app:latest
+
+kubernetes
+
+minikube version
+kubectl version
+minikube start
+kubectl get nodes
+kubectl apply -f deployment.yml --validate=false
+kubectl apply -f service.yml --validate=false
+minikube dashboard
+
+selenium
+
+:npm init -y
+npm install selenium-webdriver
+npm install chromedriver
+node test.js
