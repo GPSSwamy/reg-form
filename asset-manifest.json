@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/reg-form/static/js/main.c0c56f3b.js",
-    "index.html": "/reg-form/index.html",
-    "main.c0c56f3b.js.map": "/reg-form/static/js/main.c0c56f3b.js.map"
+    "main.js": "./static/js/main.c0c56f3b.js",
+    "index.html": "./index.html",
+    "main.c0c56f3b.js.map": "./static/js/main.c0c56f3b.js.map"
   },
   "entrypoints": [
     "static/js/main.c0c56f3b.js"
