@@ -33,7 +33,6 @@ const RegForm = () => {
             return;
         }
 
-        // Simulate successful registration
         setSuccess('Registration successful!');
         setError('');
         setFormData({
@@ -45,25 +44,28 @@ const RegForm = () => {
     };
 
     return (
-        <div style={styles.container}>
-            <h2>Register</h2>
+        <div style={styles.wrapper}>
             <form onSubmit={handleSubmit} style={styles.form}>
+                <h2 style={styles.heading}>Create Account</h2>
+
                 <input
                     type="text"
                     name="name"
-                    placeholder="Name"
+                    placeholder="Full Name"
                     value={formData.name}
                     onChange={handleChange}
                     style={styles.input}
                 />
+
                 <input
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="Email Address"
                     value={formData.email}
                     onChange={handleChange}
                     style={styles.input}
                 />
+
                 <input
                     type="password"
                     name="password"
@@ -72,6 +74,7 @@ const RegForm = () => {
                     onChange={handleChange}
                     style={styles.input}
                 />
+
                 <input
                     type="password"
                     name="confirmPassword"
@@ -80,7 +83,9 @@ const RegForm = () => {
                     onChange={handleChange}
                     style={styles.input}
                 />
+
                 <button type="submit" style={styles.button}>Register</button>
+
                 {error && <p style={styles.error}>{error}</p>}
                 {success && <p style={styles.success}>{success}</p>}
             </form>
@@ -89,38 +94,60 @@ const RegForm = () => {
 };
 
 const styles = {
-    container: {
-        maxWidth: '400px',
-        margin: '50px auto',
+    wrapper: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        background: '#f4f7fc',
         padding: '20px',
-        border: '1px solid #ddd',
-        borderRadius: '8px',
-        boxShadow: '0 0 10px #ccc'
     },
     form: {
+        backgroundColor: '#ffffff',
+        padding: '30px',
+        borderRadius: '12px',
+        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
+        width: '100%',
+        maxWidth: '400px',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+    },
+    heading: {
+        marginBottom: '20px',
+        textAlign: 'center',
+        fontSize: '24px',
+        color: '#333',
     },
     input: {
-        padding: '10px',
-        margin: '10px 0',
-        fontSize: '16px'
+        padding: '12px 15px',
+        marginBottom: '15px',
+        borderRadius: '6px',
+        border: '1px solid #ccc',
+        fontSize: '16px',
+        outline: 'none',
+        transition: 'border-color 0.3s',
     },
     button: {
-        padding: '10px',
-        fontSize: '16px',
         backgroundColor: '#007bff',
         color: '#fff',
+        padding: '12px 15px',
         border: 'none',
-        borderRadius: '4px'
+        borderRadius: '6px',
+        fontSize: '16px',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s',
     },
     error: {
-        color: 'red',
-        marginTop: '10px'
+        marginTop: '10px',
+        color: '#dc3545',
+        fontSize: '14px',
+        textAlign: 'center',
     },
     success: {
-        color: 'green',
-        marginTop: '10px'
+        marginTop: '10px',
+        color: '#28a745',
+        fontSize: '14px',
+        textAlign: 'center',
     }
 };
 
